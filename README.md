@@ -17,6 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Run `npm install` to install dependencies
 - Run `npm run migration` to run the migration files and create the neccessary tables on your database
 - Run `npm run start:dev` to get the app started on your local machine
+- Visit for example `http://localhost:4000/auth/register` to interact with the endpoints
 
 ---
 
