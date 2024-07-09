@@ -1,4 +1,8 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
+
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 type Register = {
   email: string;
@@ -11,11 +15,11 @@ const axiosInstance = axios.create({
 });
 
 export const register = async (payload: Register) => {
-  const result = await axiosInstance.post('http://localhost:4000/auth/register', payload);
+  const result = await axiosInstance.post(`${BASE_URL}/auth/register`, payload);
   return result;
 };
 
 export const login = async (payload: Register) => {
-  const result = await axiosInstance.post('http://localhost:4000/auth/login', payload);
+  const result = await axiosInstance.post(`${BASE_URL}/auth/login`, payload);
   return result;
 };
